@@ -4,7 +4,7 @@ services:
 
 
   wordpress:
-    image: wordpress:5.8
+    image: wordpress:latest
     container_name: wordpress
     expose:
       - "80"    
@@ -19,8 +19,8 @@ services:
       WORDPRESS_DB_HOST: mysql
       WORDPRESS_DB_USER: ${MYSQL_USER}
       WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}   
-      VIRTUAL_HOST: zenya.site,www.zenya.site        #debe ser un dominio válido y DNS apuntando a este servidor
-      LETSENCRYPT_HOST: zenya.site,www.zenya.site    #debe ser un dominio válido y DNS apuntando a este servidor   
+      VIRTUAL_HOST: jmkudokan.com.mx,www.jmkudokan.com.mx        #debe ser un dominio válido y DNS apuntando a este servidor
+      LETSENCRYPT_HOST: jmkudokan.com.mx,www.jmkudokan.com.mx    #debe ser un dominio válido y DNS apuntando a este servidor   
 
   mysql:
     image: mysql:8.0
